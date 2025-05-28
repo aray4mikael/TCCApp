@@ -1,50 +1,85 @@
-# Welcome to your Expo app 👋
+# TCC Monitor - Sistema de Monitoramento
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Sistema de monitoramento desenvolvido como Trabalho de Conclusão de Curso (TCC), utilizando Next.js e Firebase para gerenciamento de dados em tempo real.
 
-## Get started
+## Sobre o Projeto
 
-1. Install dependencies
+O TCC Monitor é uma aplicação web desenvolvida para monitoramento em tempo real, integrando com dispositivos ESP32 através do Firebase. O sistema permite:
+
+- Monitoramento em tempo real de dados
+- Autenticação de usuários
+- Armazenamento seguro de dados
+- Interface responsiva e moderna
+
+## Tecnologias Utilizadas
+
+- **Frontend**: Next.js
+- **Backend**: Firebase
+  - Authentication
+  - Firestore
+  - Realtime Database
+- **Dispositivos**: ESP32
+
+## Configuração do Ambiente
+
+1. Clone o repositório
+
+   ```bash
+   git clone [URL_DO_REPOSITÓRIO]
+   ```
+
+2. Instale as dependências
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Configure as variáveis de ambiente
 
+   - Crie um arquivo `.env` na raiz do projeto
+   - Adicione as seguintes variáveis:
+     ```
+     NEXT_PUBLIC_FIREBASE_API_KEY=seu_api_key
+     NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=seu_auth_domain
+     NEXT_PUBLIC_FIREBASE_DATABASE_URL=seu_database_url
+     NEXT_PUBLIC_FIREBASE_PROJECT_ID=seu_project_id
+     NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=seu_storage_bucket
+     NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=seu_messaging_sender_id
+     NEXT_PUBLIC_FIREBASE_APP_ID=seu_app_id
+     ```
+
+4. Inicie o servidor de desenvolvimento
    ```bash
-   npx expo start
+   npm run dev
    ```
 
-In the output, you'll find options to open the app in a
+## Estrutura do Projeto
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- `/app` - Diretório principal da aplicação
+  - `/firebase` - Configuração e serviços do Firebase
+  - `/components` - Componentes reutilizáveis
+  - `/pages` - Páginas da aplicação
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Segurança
 
-## Get a fresh project
+- Credenciais do Firebase são armazenadas em variáveis de ambiente
+- Autenticação implementada para controle de acesso
+- Dados sensíveis protegidos através de regras de segurança do Firebase
 
-When you're ready, run:
+## Contribuição
 
-```bash
-npm run reset-project
-```
+Para contribuir com o projeto:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+1. Faça um fork do repositório
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
 
-## Learn more
+## Licença
 
-To learn more about developing your project with Expo, look at the following resources:
+Este projeto está sob a licença [MIT](LICENSE).
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Contato
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Para mais informações sobre o projeto, entre em contato através de [SEU_EMAIL].
